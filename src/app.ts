@@ -1,9 +1,10 @@
+import config from 'config';
 import express from 'express';
 import { handlerMiddleware } from './lib/middleware';
 import helloComponentRoutes from './components/hello/api';
 
 const app = express();
-const PORT = 3000;
+const PORT = config.get('port');
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught exception', err);
