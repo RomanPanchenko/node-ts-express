@@ -8,7 +8,7 @@ import * as service from '../../service';
 
 const DEFAULT_TEST_TIMEOUT = 10000;
 
-describe.only('GET /hello with valid name', () => {
+describe('GET /hello with valid name', () => {
   beforeEach(() => {
     jest.setTimeout(10000);
   });
@@ -32,7 +32,7 @@ describe.only('GET /hello with valid name', () => {
   }, DEFAULT_TEST_TIMEOUT);
 });
 
-describe.only('GET /hello with invalid name', () => {
+describe('GET /hello with invalid name', () => {
   beforeEach(() => {
     jest.setTimeout(10000);
   });

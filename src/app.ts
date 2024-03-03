@@ -16,8 +16,8 @@ process.on('unhandledRejection', (reason) => {
   process.exit(1);
 });
 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Components
 app.use(helloComponentRoutes);

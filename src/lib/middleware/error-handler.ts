@@ -5,6 +5,7 @@ import { IHttpError } from '../errors';
 const INCLUDE_STACK = config.get('logger.include_stack');
 
 export const handlerMiddleware = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return (err: IHttpError, req: Request, res: Response, next: NextFunction) => {
     const errorResponse = {
       statusCode: err.statusCode || 500,
@@ -25,5 +26,4 @@ export const handlerMiddleware = () => {
     }
   };
 };
-
 
