@@ -3,9 +3,10 @@ import * as service from '../../service';
 describe('hello service', () => {
   describe('getHello function', () => {
     it('returns the user-name value from the query object', async () => {
-      const query = { 'user-name': 'John Doe' };
+      const name = 'John Doe';
+      const query = { 'user-name': name };
       const result = await service.getHello(query);
-      expect(result).toBe('John Doe');
+      expect(result).toBe(`Hello ${name}!`);
     });
   });
 });

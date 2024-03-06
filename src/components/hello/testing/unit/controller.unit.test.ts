@@ -23,16 +23,18 @@ describe('Controller hello', () => {
     });
 
     it('should return 200 and a greeting message for valid query', async () => {
-      const req = mockRequest({ 'user-name': 'Alice' }) as Request;
+      const name = 'Alice';
+      const retMsg = `Hello ${name}!`;
+      const req = mockRequest({ 'user-name': name }) as Request;
       const res = mockResponse() as Response;
 
-      (service.getHello as jest.Mock).mockResolvedValue('Alice');
+      (service.getHello as jest.Mock).mockResolvedValue(retMsg);
 
       await controller.getHello(req, res);
 
       expect(res.status).toHaveBeenCalledWith(200);
-      expect(res.send).toHaveBeenCalledWith('Hello Alice!');
-      expect(service.getHello).toHaveBeenCalledWith({ 'user-name': 'Alice' });
+      expect(res.send).toHaveBeenCalledWith(retMsg);
+      expect(service.getHello).toHaveBeenCalledWith({ 'user-name': name });
     });
 
     it('should throw ValidationError for invalid value', async () => {

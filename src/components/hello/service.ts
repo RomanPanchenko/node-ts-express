@@ -1,3 +1,5 @@
 export const getHello = async (query: any): Promise<string> => {
-  return query['user-name'];
+  const name = query['user-name'];
+
+  return `Hello ${name}!`;
 };
