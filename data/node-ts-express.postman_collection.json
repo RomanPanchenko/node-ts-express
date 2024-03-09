@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "73c1af80-f161-4ae0-a530-a1f29be54015",
+		"name": "node-ts-express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1541482"
+	},
+	"item": [
+		{
+			"name": "all-users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/all-users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"all-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"earnings\": \"$1000\",\r\n    \"country\": \"TEST\",\r\n    \"name\": \"Test user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/add-user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"add-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "distinct-countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/distinct-countries",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"distinct-countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/stats",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

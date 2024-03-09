@@ -1,0 +1,8 @@
+1. Fetch all user details as it is in the file >> Eg. : [{...userData1..}, ...]
+2. Add new user. Save new data in the JSON file.
+3. Fetch distinct countries with number of users >> Eg.: { country1: 3; country2: 12, ... }
+4. Provide statistics on all countries in one request:
+average earnings of the 10 users with highest earnings per country.
+
+ >> Eg.: { country1: 3; country2: 12, ... }
+Optimize for performance: consider a huge database, and that the frequency of user updates is low, while the frequency of statistics requests is very high.
